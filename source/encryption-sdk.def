@@ -1,0 +1,13 @@
+LIBRARY encryption-sdk
+EXPORTS
+	load_sdk @1
+	unload_sdk @2
+	get_sdk @3
+	is_sdk_loaded @4
+	register_key @5
+	encrypt_file @6
+	encrypt_file_with_password @7
+	decrypt_file @8
+	decrypt_file_with_password @9
+	is_file_encrypted @10
+	is_file_encrypted_with_password @11

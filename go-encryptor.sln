@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "encryption-sdk", "encryption-sdk\encryption-sdk.vcxproj", "{8D312917-8C0B-405F-B37F-636F02479715}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "encryption-sdk-test", "encryption-sdk-test\encryption-sdk-test.vcxproj", "{8D3B2E08-CE0B-4FFB-9A9B-FB243ADB24AB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8D312917-8C0B-405F-B37F-636F02479715} = {8D312917-8C0B-405F-B37F-636F02479715}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "go-encryptor", "go-encryptor\go-encryptor.csproj", "{13CF8288-977F-43D3-9ECE-0C3AF709C231}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8D312917-8C0B-405F-B37F-636F02479715} = {8D312917-8C0B-405F-B37F-636F02479715}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D312917-8C0B-405F-B37F-636F02479715}.Debug|x64.ActiveCfg = Debug|x64
+		{8D312917-8C0B-405F-B37F-636F02479715}.Debug|x64.Build.0 = Debug|x64
+		{8D312917-8C0B-405F-B37F-636F02479715}.Debug|x86.ActiveCfg = Debug|Win32
+		{8D312917-8C0B-405F-B37F-636F02479715}.Debug|x86.Build.0 = Debug|Win32
+		{8D312917-8C0B-405F-B37F-636F02479715}.Release|x64.ActiveCfg = Release|x64
+		{8D312917-8C0B-405F-B37F-636F02479715}.Release|x64.Build.0 = Release|x64
+		{8D312917-8C0B-405F-B37F-636F02479715}.Release|x86.ActiveCfg = Release|Win32
+		{8D312917-8C0B-405F-B37F-636F02479715}.Release|x86.Build.0 = Release|Win32
+		{8D3B2E08-CE0B-4FFB-9A9B-FB243ADB24AB}.Debug|x64.ActiveCfg = Debug|x64
+		{8D3B2E08-CE0B-4FFB-9A9B-FB243ADB24AB}.Debug|x64.Build.0 = Debug|x64
+		{8D3B2E08-CE0B-4FFB-9A9B-FB243ADB24AB}.Debug|x86.ActiveCfg = Debug|Win32
+		{8D3B2E08-CE0B-4FFB-9A9B-FB243ADB24AB}.Debug|x86.Build.0 = Debug|Win32
+		{8D3B2E08-CE0B-4FFB-9A9B-FB243ADB24AB}.Release|x64.ActiveCfg = Release|x64
+		{8D3B2E08-CE0B-4FFB-9A9B-FB243ADB24AB}.Release|x64.Build.0 = Release|x64
+		{8D3B2E08-CE0B-4FFB-9A9B-FB243ADB24AB}.Release|x86.ActiveCfg = Release|Win32
+		{8D3B2E08-CE0B-4FFB-9A9B-FB243ADB24AB}.Release|x86.Build.0 = Release|Win32
+		{13CF8288-977F-43D3-9ECE-0C3AF709C231}.Debug|x64.ActiveCfg = Debug|x64
+		{13CF8288-977F-43D3-9ECE-0C3AF709C231}.Debug|x64.Build.0 = Debug|x64
+		{13CF8288-977F-43D3-9ECE-0C3AF709C231}.Debug|x86.ActiveCfg = Debug|x86
+		{13CF8288-977F-43D3-9ECE-0C3AF709C231}.Debug|x86.Build.0 = Debug|x86
+		{13CF8288-977F-43D3-9ECE-0C3AF709C231}.Release|x64.ActiveCfg = Release|x64
+		{13CF8288-977F-43D3-9ECE-0C3AF709C231}.Release|x64.Build.0 = Release|x64
+		{13CF8288-977F-43D3-9ECE-0C3AF709C231}.Release|x86.ActiveCfg = Release|x86
+		{13CF8288-977F-43D3-9ECE-0C3AF709C231}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A886C00E-1094-4BFB-8564-B0A1C93E76C8}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,36 @@
+﻿<Window x:Class="go_encryptor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:go_encryptor"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="GO Encryptor" Height="235" Width="388"
+        ResizeMode="NoResize"
+        Icon="Resources/icons/logo.png"
+        Name="wndMain"
+        AllowDrop="True"
+        Drop="wndMain_Drop">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Button BorderBrush="White" Background="White" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="181" Height="184" Click="Encrypt_Click">
+            <Image Height="100" Width="100" Source="Resources/icons/lock-icon.png"/>
+        </Button>
+        <Button BorderBrush="White" Background="White" HorizontalAlignment="Left" Margin="1,10,0,0" VerticalAlignment="Top" Width="172" Height="184" Grid.Column="1" Click="Decrypt_Click">
+            <Image Height="100" Width="100" Source="Resources/icons/unlock-icon.png"/>
+        </Button>
+    </Grid>
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Name="miAboutGo" Header="About Go Encryptor" Click="miAboutGo_Click">
+                <MenuItem.Icon>
+                    <Image Source="Resources/icons/logo.png" />
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>        
+    </Window.ContextMenu>
+</Window>
