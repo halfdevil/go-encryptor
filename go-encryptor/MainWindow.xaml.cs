@@ -23,12 +23,24 @@ namespace go_encryptor
         {            
             InitializeComponent();
 
-            error = new StringBuilder(ErrorBufferSize);
-            if (EncryptionSdkWrapper.load_sdk() == 0)
+            try
             {
-                MessageBox.Show(this, "Unable to load encryption sdk",
-                    "GO Encryptor",
-                    MessageBoxButton.OK, MessageBoxImage.Error);
+                error = new StringBuilder(ErrorBufferSize);
+                if (EncryptionSdkWrapper.load_sdk() == 0)
+                {
+                    MessageBox.Show(this, "Unable to load encryption sdk",
+                        "GO Encryptor",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
+
+                    Application.Current.Shutdown();
+                    return;
+                }
+            }
+            catch(DllNotFoundException dllNotFound)
+            {
+                MessageBox.Show(this, dllNotFound.Message,
+                        "GO Encryptor",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
 
                 Application.Current.Shutdown();
                 return;

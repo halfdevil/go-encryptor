@@ -61,7 +61,7 @@ int encrypt_file(int key_id, const char * input_file,
 	if (!is_sdk_loaded())
 		return -1;
 
-	sdk_application *app = g_sdk->get_application(g_sdk);
+	struct _sdk_application *app = g_sdk->get_application(g_sdk);
 	sdk_encryptor *enc = app->get_encryptor(app);
 
 	sdk_error err;
@@ -79,7 +79,7 @@ int encrypt_file_with_password(int key_id, const char * password, const char * i
 	if (!is_sdk_loaded())
 		return -1;
 
-	sdk_application *app = g_sdk->get_application(g_sdk);
+	struct _sdk_application *app = g_sdk->get_application(g_sdk);
 	sdk_encryptor *enc = app->get_encryptor(app);
 
 	sdk_error err;
@@ -97,7 +97,7 @@ int decrypt_file(int key_id, const char * input_file,
 	if (!is_sdk_loaded())
 		return -1;
 
-	sdk_application *app = g_sdk->get_application(g_sdk);
+	struct _sdk_application *app = g_sdk->get_application(g_sdk);
 	sdk_encryptor *enc = app->get_encryptor(app);
 
 	sdk_error err;
@@ -115,7 +115,7 @@ int decrypt_file_with_password(const char * password, const char * input_file,
 	if (!is_sdk_loaded())
 		return -1;
 
-	sdk_application *app = g_sdk->get_application(g_sdk);
+	struct _sdk_application *app = g_sdk->get_application(g_sdk);
 	sdk_encryptor *enc = app->get_encryptor(app);
 
 	sdk_error err;
@@ -132,7 +132,7 @@ int is_file_encrypted(const char * file)
 	if (!is_sdk_loaded())
 		return -1;
 
-	sdk_application *app = g_sdk->get_application(g_sdk);
+	struct _sdk_application *app = g_sdk->get_application(g_sdk);
 	sdk_encryptor *enc = app->get_encryptor(app);
 
 	return enc->is_file_encrypted(enc, file);
@@ -143,7 +143,7 @@ int is_file_encrypted_with_password(const char * file)
 	if (!is_sdk_loaded())
 		return -1;
 
-	sdk_application *app = g_sdk->get_application(g_sdk);
+	struct _sdk_application *app = g_sdk->get_application(g_sdk);
 	sdk_encryptor *enc = app->get_encryptor(app);
 
 	return enc->is_file_encrypted_with_password(enc, file);
